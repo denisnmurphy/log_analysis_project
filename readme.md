@@ -36,4 +36,8 @@ psql -d news (connect to the news database)
 
 # Project Design
 
-connect_to_db function created to allow you to connect to the database and run SQL queries on the database from this function.
+connect_to_db() function created to allow you to connect to the database and run SQL queries on the database from this function.
+
+print_answers() function created to print the items in list of tuples underneath each other and with the correct formatting.
+
+main() function created for the print_answers function to take in the results from the sql queries ran from the connect_to_db function.
