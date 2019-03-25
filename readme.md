@@ -41,3 +41,21 @@ connect_to_db() function created to allow you to connect to the database and run
 print_answers() function created to print the items in list of tuples underneath each other and with the correct formatting.
 
 main() function created for the print_answers function to take in the results from the sql queries ran from the connect_to_db function.
+
+query variable used to pass in the sql queries 1 and 2 to reuse the code.
+
+
+
+# Create Views
+#Question 2
+
+articlecount view
+```
+create article count view as select title, count(*) as views from articles join log on articles.slug = substring(log.path, 10) group by title order by views DESC;
+```
+
+authorname view
+
+```
+create view authorname as select name, title from authors, articles  where authors.id = articles.author;
+```
