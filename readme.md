@@ -17,11 +17,14 @@ Create a tool to analyse the data from a news website and find answers to the fo
 
 # Instructions
 
-Install the latest version of VirtualBox.
-Install the latest version of Vagrant
+Install the latest version of <a href="https://www.virtualbox.org/">VirtualBox</a>.
+Install the latest version of <a href="https://www.vagrantup.com/">Vagrant</a>.
 
-Download Vagranfile which contains the settings for this project.
-Download newsdata.sql which contains the data to create the PostgreSQL database with.
+Download Vagrantfile -- contains the settings for this project. </br>
+Download newsdata.sql -- contains the data to create the PostgreSQL. </br> database with.
+
+<a href="https://drive.google.com/uc?export=download&id=1H_FA_WJQ_cPILbi8mAKymbfnVEn6kU9p" download>Newsdata.sql</a></br>
+<a href="https://drive.google.com/uc?export=download&id=1t0uXEVC2UIr8LRiCOkz24O4WUYUsgY4I" download>Vagrant file</a>
 
 
 ```
@@ -29,8 +32,11 @@ vagrant up
 vagrant ssh
 cd /vagrant
 psql -d news -f newsdata.sql (run the sql statements to create the tables in the database)
-psql -d news (connect to the news database)
+psql -d news (whenever you need to connect to the news database)
+\q - exits the database and the psql prompt
 
+Run Log analysis tool using
+python3 log_analysis.py
 
 ```
 
