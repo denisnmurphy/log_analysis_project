@@ -46,10 +46,12 @@ connect_to_db() function created to allow you to connect to the database and run
 
 print_answers() function created to print the items in list of tuples underneath each other and with the correct formatting.
 
-main() function created for the print_answers function to take in the results from the sql queries ran from the connect_to_db function.
+main() function created for the print_answers() function to take in the results from the sql queries ran from the connect_to_db function.
 
-query variable used to pass in the sql queries 1 and 2 to reuse the code.
+query variable used to pass in the sql queries 1, 2 and 3 to reuse the code.
 
+print_percent() function created to return the answer to question 3 with the correct
+formatting and to convert the date to the format displaying month name. 
 
 
 # Create Views
