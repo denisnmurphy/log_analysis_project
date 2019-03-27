@@ -13,7 +13,8 @@ query_2 = """select name, sum(views) as totalviews from authorname,
             group by authorname.name order by totalviews desc;"""
 
 
-# query_3 =
+query_3 = """ select time, percent from percentageerrors
+                where percent > 1.0;"""
 
 
 def connect_to_db(query):
@@ -33,10 +34,19 @@ def print_answers(results):
         print(result, '--', view, 'views')
 
 
+def print_percent(results):
+
+    print('-------------')
+    for result, view in results:
+        date_time = result.strftime('%b %d, %Y')
+        print(date_time, '--', view, '%', 'errors')
+
+
 def main():
 
     print_answers(connect_to_db(query_1))
     print_answers(connect_to_db(query_2))
+    print_percent(connect_to_db(query_3))
 
 
 main()

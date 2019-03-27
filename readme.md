@@ -53,7 +53,7 @@ query variable used to pass in the sql queries 1 and 2 to reuse the code.
 
 
 # Create Views
-#Question 2
+# Question 2
 
 articlecount view
 ```
@@ -64,4 +64,34 @@ authorname view
 
 ```
 create view authorname as select name, title from authors, articles  where authors.id = articles.author;
+```
+
+# Question 3
+
+totalrequests view
+
+```
+select cast(time as date), count(time) as totalrequests from log group by cast(time as date);
+
+```
+
+badrequests view
+
+```
+create view badrequests as select cast(time as date)as requesttimes, count(time) as badrequests from log where status not like '%200%' group by cast(time as date);
+
+```
+
+
+totalandbadrequests view
+
+```
+select time, badrequests, totalrequests from totalrequests join badrequests on totalrequests.time = badrequests.requesttimes;
+
+```
+
+percentageerrors view
+
+```
+create view percentageerrors as select time, cast(cast(badrequests as float) / cast(totalrequests as float) * 100 as decimal(5,1)) as percent from totalandbadrequests;
 ```
