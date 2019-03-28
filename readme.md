@@ -24,7 +24,7 @@ Download Vagrantfile -- contains the settings for this project. </br>
 Download newsdata.sql -- contains the data to create the PostgreSQL. </br> database with.
 
 <a href="https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip">Newsdata.sql</a></br>
-<a href="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5acfbfa3_fsnd-virtual-machine/fsnd-virtual-machine.zip"">Vagrant file</a>
+<a href="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5acfbfa3_fsnd-virtual-machine/fsnd-virtual-machine.zip">Vagrant file</a>
 
 
 ```
