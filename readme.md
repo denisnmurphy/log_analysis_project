@@ -59,7 +59,7 @@ formatting and to convert the date to the format displaying month name.
 
 #### articlecount view
 ```
-create articlecount view as select title, count(*) as views from articles join log on articles.slug = substring(log.path, 10) group by title order by views DESC;
+create view articlecount as select title, count(*) as views from articles join log on articles.slug = substring(log.path, 10) group by title order by views DESC;
 ```
 
 #### authorname view
